@@ -1,0 +1,34 @@
+MSI Gestion - serveur de la clinique (réseau local)
+=====================================================
+
+À QUOI ÇA SERT
+Tous les appareils connectés au Wi-Fi de la clinique (accueil, caisse, médecins, pharmacie…) travaillent sur la MÊME base.
+Un compte créé une seule fois fonctionne sur tous ces appareils.
+
+INSTALLATION (une seule fois, sur l'ordinateur qui servira de serveur)
+1. Installez Node.js 22 (surtout pas la version 24) : https://nodejs.org/dist/latest-v22.x/
+   puis choisissez le fichier « node-v22….-x64.msi ».
+2. Décompressez ce dossier, par exemple dans C:\MSI-Gestion.
+3. Double-cliquez sur « Demarrer-MSI-Gestion.bat ». Au premier lancement, il installe les composants
+   (Internet nécessaire), crée la base et affiche le MOT DE PASSE DE L'ADMINISTRATEUR : notez-le.
+4. Si Windows demande l'autorisation du pare-feu, cochez « Réseaux privés », puis « Autoriser ».
+5. Le navigateur s'ouvre : connectez-vous avec « admin » et le mot de passe noté, choisissez votre
+   mot de passe, puis créez les comptes du personnel (Paramétrage, Utilisateurs).
+6. Copiez le fichier donnees\cle-sauvegarde.key sur une clé USB rangée au coffre.
+
+CHAQUE JOUR
+Allumez cet ordinateur et double-cliquez sur « Demarrer-MSI-Gestion.bat ».
+Gardez la fenêtre ouverte (réduite) toute la journée.
+
+LES AUTRES APPAREILS
+La fenêtre affiche « Depuis les autres postes : http://192.168.x.x:8080 ».
+Sur chaque téléphone ou ordinateur connecté au Wi-Fi de la clinique, ouvrez cette adresse dans le navigateur,
+ou, dans l'application Android, saisissez-la dans la rubrique « Serveur de la clinique ».
+Conseil : demandez à votre prestataire de réserver l'adresse de cet ordinateur dans la box, pour qu'elle ne change pas.
+
+LIMITES
+- Accessible seulement depuis le Wi-Fi de la clinique. Pour un accès depuis partout, utilisez la mise en ligne
+  sur Render (guide « MSI Gestion en ligne avec Render »).
+- Si l'ordinateur serveur est éteint, personne ne peut travailler.
+- Les sauvegardes automatiques (toutes les 15 minutes) sont dans donnees\sauvegardes :
+  copiez-les régulièrement sur une clé USB ou un espace en ligne.
